@@ -34,6 +34,15 @@ h1{
     color: var(--gray);
 }
 
+.conteiner{
+    width: 65vw;
+    padding: 1vw;
+    margin: 1vw;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+}
 .item{
     border: 3px solid var(--yellow);
     padding: 1vw;
@@ -44,43 +53,28 @@ h1{
     cursor: pointer;
 }
 
-.conteiner{
-    width: 65vw;
-    padding: 1vw;
-    margin: 1vw;
-    cursor: pointer;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.item__title{
+.title{
     font-size: max(1em, 1.5vw);
+    cursor: pointer;
 }
 
 .item:active{
     color: var(--yellow);
 }
 
+.label{
+    box-sizing: border-box;
+}
+
 .item__input:checked + .item__img{
     display: block;
-}
-
-.item__title::after{
-    content: '+';
-}
-
-.item__input:checked + .item__title::after{
-    content: '-';
-}
-
-.item:checked + .item__title{
-    color: var(--yellow);
+    cursor: pointer;
 }
 
 
-.item__input:hover + .item__img{
+.item__input:hover ~ .item__img{
     display: block;
+    cursor: pointer;
 }
 
 .item__input{
@@ -94,31 +88,7 @@ h1{
     width: 20vw;
     margin: 0 auto;
     display: none;
-    /* width: 0; */
-    /* height: 0; */
-    /* display: none; */
-    /* max-height: 0; */
-    /* overflow: hidden; */
 }
-
-/* .item{
-    width: clamp(280px, 65vw, 1000px);
-    border: 3px solid var(--yellow);
-    padding: 1vw;
-    margin: 1vw;
-    cursor: pointer;
-    transform: color .2s ease-out;
-    transition: .3s;
-} */
-
-/* .item:hover{
-    color: var(--yellow);
-} */
-
-/* .header__titles{
-    display: flex;
-    justify-content: space-between;
-} */
 
 
 
