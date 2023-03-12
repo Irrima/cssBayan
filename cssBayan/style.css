@@ -34,6 +34,16 @@ h1{
     color: var(--gray);
 }
 
+.item{
+    border: 3px solid var(--yellow);
+    padding: 1vw;
+    margin: 1vw;
+    
+    transform: color .2s ease-out;
+    transition: .3s;
+    cursor: pointer;
+}
+
 .conteiner{
     width: 65vw;
     padding: 1vw;
@@ -46,23 +56,32 @@ h1{
 
 .item__title{
     font-size: max(1em, 1.5vw);
-    border: 3px solid var(--yellow);
-    padding: 1vw;
-    margin: 1vw;
-    
-    /* transform: color .2s ease-out; */
-    transition: .3s;
-    cursor: pointer;
+}
+
+.item:active{
+    color: var(--yellow);
 }
 
 .item__input:checked + .item__img{
     display: block;
-    /* color: var(--yellow); */
 }
 
-/* .item__input:hover + .item__img{
+.item__title::after{
+    content: '+';
+}
+
+.item__input:checked + .item__title::after{
+    content: '-';
+}
+
+.item:checked + .item__title{
+    color: var(--yellow);
+}
+
+
+.item__input:hover + .item__img{
     display: block;
-} */
+}
 
 .item__input{
     left: 0;
@@ -72,7 +91,7 @@ h1{
 }
 
 .item__img{
-    width: 40vw;
+    width: 20vw;
     margin: 0 auto;
     display: none;
     /* width: 0; */
